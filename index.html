@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>434 Health App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js" defer></script> <!-- Separate JavaScript file -->
+</head>
+
+<body>
+    <div class="device">
+        <h1>MyJourney</h1> 
+        
+        <!-- Circular Profile Button -->
+        <button class="profile-button" onclick="showTab('Profile', this)">👤</button>
+
+        <div id="tab-content" class="content">
+            <div class="profile-section">
+                <div class="profile-picture">
+                    <img id="profileImg" src="default-profile.png" alt="Profile Picture">
+                    <input type="file" id="uploadPicture" accept="image/*" onchange="loadProfilePicture(event)">
+                </div>
+                <div class="user-info">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+            
+                    <label for="height">Height:</label>
+                    <input type="text" id="height" placeholder="Enter your height">
+            
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" placeholder="Enter your age">
+            
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="">Select gender</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- New Section for Days (within My Journey tab) -->
+            <div id="day-section" class="day-section">
+                <h2>Select Days for Tracking</h2>
+                <div class="day-grid">
+                    <div class="day">Monday</div>
+                    <div class="day">Tuesday</div>
+                    <div class="day">Wednesday</div>
+                    <div class="day">Thursday</div>
+                    <div class="day">Friday</div>
+                    <div class="day">Saturday</div>
+                    <div class="day">Sunday</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <button onclick="showTab('home', this)">Home</button>
+            <button onclick="showTab('Mind', this)">Mind</button>
+            <button onclick="showTab('Fitness', this)">Fitness</button>
+            <button onclick="showTab('Nutrition', this)">Nutrition</button>
+            <button onclick="showTab('MyJourney', this)">MyJourney</button>
+        </div>
+    </div>
+</body>
+</html>

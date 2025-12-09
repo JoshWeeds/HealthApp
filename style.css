@@ -1,0 +1,1075 @@
+.device {
+  margin: auto;
+  width: 640px;
+  height: 960px;
+  overflow: hidden;
+  background-color: #49d7d7;
+  position: relative;
+}
+
+h1 {
+  font-size: 28pt;
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+
+.content {
+  padding: 10px;
+  height: calc(100% - 120px);
+  overflow-y: auto; /* Ensure the entire tab content is scrollable */
+  background-color: #2b2929;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #020202;
+  padding: 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  flex: 1;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+  outline: none;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+.navbar button.active {
+  background-color: #dce6ef;
+  color: rgb(14, 1, 1);
+  font-weight: bold;
+}
+
+.alert {
+  padding: 20px;
+  background-color: gray;
+  color: white;
+  display: none;
+  text-align: center;
+  width: inherit;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 16pt;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inherit;
+}
+
+.closebtn:hover {
+  font-size: 20pt;
+  color: rgb(9, 143, 143);
+}
+
+img {
+  position: absolute;
+  width: 150px;
+  left: 245px;
+}
+
+#t1_text {
+  height: inherit;
+  width: inherit;
+  overflow: inherit;
+}
+
+#todo-input {
+  width: 80%;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+#add-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 10px auto;
+  width: 85%;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#add-button:hover {
+  background-color: #1f7532;
+}
+
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#todo-list li {
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-list li.crossed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn {
+  background-color: #e54958;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background-color: #b51828;
+}
+
+/* Additional CSS for the Quote of the Day section */
+.quote-container {
+  background-color: #4ec4c4;
+  padding: 20px;
+  margin: 25px 10px 50px;
+  border-radius: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 85px;
+  left: 0;
+  right: 0;
+}
+
+.quote-text {
+  font-style: italic;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #3b83e6;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.progress-container {
+  background-color: #4ec4c4;
+  padding: 20px;
+  margin: 20px 10px 50px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+}
+
+#summary {
+  margin: 1px;
+}
+
+.community-container {
+  position: relative;
+  background-color: #4ec4c4;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin: 240px 0px;
+  border-radius: 10px;
+  text-align: center;
+  width: calc(100%);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.community-container h2 {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4ec4c4;
+  padding: 0 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+}
+
+.community-progress {
+  padding-top: 20px;
+}
+
+.friend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.status {
+  font-size: 40px;
+  color: green;
+}
+
+.friend-icon {
+  font-size: 20px;
+  background-color: white;
+  color: #4b0082;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid #4b0082;
+}
+
+.progress-bar {
+  width: 50%;
+  height: 15px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px 0 0 10px;
+}
+
+.ping-button {
+  background-color: #e54958;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ping-button:hover {
+  background-color: #b51828;
+}
+
+.add-friend-button {
+  background-color: #4ec4c4;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.add-friend-button:hover {
+  background-color: #3b83e6;
+}
+
+.profile-button {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.profile-button:hover {
+  background-color: black;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.profile-picture {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(250, 250, 250, 0.783);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-picture input[type="file"] {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.user-info {
+  text-align: left;
+  width: 250px;
+}
+
+.user-info label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.user-info input,
+.user-info select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.nutrition-container {
+  padding: 20px;
+  margin: 0 20px 20px;
+  color: #ffffff;
+  background-color: #2b2929;
+  border-radius: 10px;
+}
+
+.nutrition-container .app-header h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  color: #49d7d7;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 5px;
+  color: #cccccc;
+  font-size: 16px;
+}
+
+.input-section input,
+.input-section select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4ec4c4;
+  border-radius: 4px;
+  background-color: #3b3b3b;
+  color: #ffffff;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.input-section input::placeholder {
+  color: #888888;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #49d7d7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+  background-color: #3aa0a0;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #49d7d7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.add-btn:hover {
+  background-color: #3aa0a0;
+}
+
+.chart-section {
+  margin-top: 20px;
+  display: flex;
+  margin-left: 90px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.chart-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+#carbsDisplay,
+#fatsDisplay,
+#proteinsDisplay {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#carbsDisplay {
+  color: #49d7d7;
+}
+
+#fatsDisplay {
+  color: #2b9b9b;
+}
+
+#proteinsDisplay {
+  color: #a0f0ed;
+}
+
+.hydration-tracker {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.hydration-tracker p {
+  font-size: 16px;
+  color: #cccccc;
+  text-align: left;
+}
+
+.calorie-tracker {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.calorie-tracker p {
+  font-size: 16px;
+  color: #cccccc;
+  text-align: left;
+}
+
+#calorieProgress {
+  height: 100%;
+  width: 0%;
+  background-color: #e54958;
+  transition: width 0.5s;
+}
+
+#pieChart {
+  display: none;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #4e4e4e;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+#waterProgress {
+  height: 100%;
+  width: 0%;
+  background-color: #49d7d7;
+  transition: width 0.5s;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #e54958;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #b51828;
+}
+/* stuff for fitnes */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+.fitness-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Preset workouts list */
+.preset-workouts,
+.custom-workouts {
+  margin: 20px 0;
+}
+
+.preset-workouts ul,
+.custom-workouts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.preset-workouts li,
+.custom-workouts li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e0e0;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.preset-workouts li:hover,
+.custom-workouts li:hover {
+  background-color: #d1d1d1; /* Darker shade on hover */
+}
+
+/* Input field for reps */
+.reps-input {
+  width: 50px;
+  margin-left: 10px;
+}
+
+.sets-input {
+  width: 50px;
+  margin-left: 20px;
+}
+
+/* Delete button styling */
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d43b3b;
+}
+
+/* Add custom workout button */
+.add-workout-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.add-workout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Filter dropdown */
+.workout-filters {
+  margin-top: 20px;
+}
+
+.workout-filters select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.goal {
+  margin: 20px 0;
+}
+.goal-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.goal-display{
+  background-color: #4ec4c4;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 10px;
+  flex:1;
+}
+
+#pb1{
+  width: 90%;
+  align-self:center;
+  text-align: right;
+}
+
+#water-progress, #calorie-progress{
+  padding-right: 3px;
+  padding-left:3px;
+}
+
+.prog-meters{
+  width: 70%;
+}
+
+.edit-goal {
+  background: none;
+  border: none;
+  cursor: pointer;
+  size:1rem;
+}
+
+.weekly-progress {
+  display: none;
+  justify-content:center;
+  height:120px;
+}
+.day-box {
+  width: 40px;  /* made it wider to be more noticeable */
+  height: 40px;  /* made it taller to be more noticeable */
+  margin: 5px;
+  background-color: red; /* Default to red */
+}
+.day-box.half-complete {
+  background: linear-gradient(to bottom, green 50%, red 50%);
+}
+.day-box.complete {
+  background-color: green;
+}
+
+#dailySummary{
+  height: 200px;
+}
+
+
+.goal-row {
+  display: flex;
+  justify-content: center;
+  width:100%;
+  height:200px;
+}
+
+.goal-button {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  height: 100%;
+  width:100%;
+}
+
+.mindfulness-container {
+  padding: 20px;
+  margin: 0 20px 20px;
+  color: #ffffff;
+  background-color: #2b2929;
+  border-radius: 10px;
+}
+
+.mindfulness-container .app-header h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  color: #49d7d7;
+}
+
+.sleep-section {
+  margin-top: 20px;
+  color: #cccccc;
+}
+
+.sleep-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.sleep-section input,
+.sleep-section select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4ec4c4;
+  border-radius: 4px;
+  background-color: #3b3b3b;
+  color: #ffffff;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.evaluate-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #49d7d7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.evaluate-btn:hover {
+  background-color: #3aa0a0;
+}
+
+#sleepFeedback {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.meditation-yoga-section {
+  margin-top: 20px;
+  color: #cccccc;
+}
+
+.meditation-yoga-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.meditation-yoga-section select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4ec4c4;
+  border-radius: 4px;
+  background-color: #3b3b3b;
+  color: #ffffff;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.start-workout-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #49d7d7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-workout-btn:hover {
+  background-color: #3aa0a0;
+}
+
+.journaling-section {
+  margin-top: 20px;
+  color: #cccccc;
+}
+
+.journaling-section textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4ec4c4;
+  border-radius: 4px;
+  background-color: #3b3b3b;
+  color: #ffffff;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.save-journal-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #49d7d7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-journal-btn:hover {
+  background-color: #3aa0a0;
+}
+
+#journalEntries {
+  margin-top: 20px;
+  background-color: #3b3b3b;
+  padding: 100px;
+  border-radius: 4px;
+  color: #ffffff;
+  max-height: 300px; /* Adjust this height as needed */
+  overflow-y: auto; /* Ensures entries are scrollable */
+}
+
+
+/* stuff for fitnes */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+.fitness-container {
+  padding: 20px;
+  margin: 0 20px 20px;
+  color: #ffffff;
+  background-color: #2b2929; /* Matching background color */
+  border-radius: 10px; /* Uniform border radius */
+}
+
+.fitness-container .app-header h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  color: #49d7d7; /* Uniform color */
+}
+
+.preset-workouts,
+.custom-workouts {
+  margin: 20px 0;
+}
+
+.preset-workouts ul,
+.custom-workouts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.preset-workouts li,
+.custom-workouts li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3b3b3b; /* Matching background color for list items */
+  color: #ffffff; /* White text color */
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.preset-workouts li:hover,
+.custom-workouts li:hover {
+  background-color: #4c4c4c; /* Slightly darker shade on hover */
+}
+
+.add-workout-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #49d7d7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-workout-btn:hover {
+  background-color: #3aa0a0;
+}
+
+.reps-input {
+  width: 60px;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #3b3b3b; /* Matching input background */
+  color: #ffffff; /* White text color */
+  border: 1px solid #4ec4c4; /* Matching border color */
+  border-radius: 4px;
+}
+
+.sets-input {
+  width: 60px;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #3b3b3b; /* Matching input background */
+  color: #ffffff; /* White text color */
+  border: 1px solid #4ec4c4; /* Matching border color */
+  border-radius: 4px;
+}
+
+.delete-btn {
+  background-color: #e54958;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #b51828;
+}
+
+/* Add custom workout button */
+.add-workout-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.add-workout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Filter dropdown */
+.workout-filters {
+  margin-top: 20px;
+}
+
+.workout-filters select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-picture-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px; /* Adjust as needed to control spacing */
+}
+
+#profileImg {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+#uploadPicture {
+  margin-top: 10px; /* Adjust the space between the image and the input */
+  cursor: pointer;
+}
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #49d7d7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: #3aa0a0;
+}
+
+.bmi-result {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
